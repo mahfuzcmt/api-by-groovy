@@ -1,5 +1,6 @@
-package hibernate.example
+package com.bitsoft.amr
 
+import grails.converters.JSON
 import grails.core.GrailsApplication
 import grails.plugins.*
 
@@ -9,6 +10,6 @@ class ApplicationController implements PluginManagerAware {
     GrailsPluginManager pluginManager
 
     def index() {
-        [grailsApplication: grailsApplication, pluginManager: pluginManager]
+        render([message: "Unauthorized Access!"] as JSON)
     }
 }

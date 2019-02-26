@@ -1,4 +1,4 @@
-package hibernate.example
+package com.bitsoft.amr
 
 class BootStrap {
 

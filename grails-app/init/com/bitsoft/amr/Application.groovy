@@ -1,4 +1,4 @@
-package hibernate.example
+package com.bitsoft.amr
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

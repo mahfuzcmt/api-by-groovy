@@ -2,7 +2,7 @@
 grails:
     profile: rest-api
     codegen:
-        defaultPackage: hibernate.example
+        defaultPackage: com.bitsoft.amr
     gorm:
         reactor:
             # Whether to translate GORM events into Reactor events
@@ -69,17 +69,14 @@ hibernate:
         use_second_level_cache: false
         use_query_cache: false
 dataSource:
-    pooled: true
-    jmxExport: true
-    driverClassName: org.h2.Driver
-    username: sa
+    username: root
     password: ''
 
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
-            url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+            dbCreate: update
+            url: "jdbc:mysql://localhost/amr_groovy?useUnicode=yes&characterEncoding=UTF-8"
     test:
         dataSource:
             dbCreate: update
@@ -106,3 +103,5 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+server:
+    port: 9999
